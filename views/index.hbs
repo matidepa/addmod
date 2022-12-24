@@ -12,7 +12,7 @@
             <h2>Mas vendidas</h2>
             <ul class="lista-novedades">
                 {{#each novedades}}
-                <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="/images/novedades01.png">{{titulo}} Cheese Burger Doble</a></li>
+                <li><a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{ id  }}"><img src="{{imagen}}" width="120">{{titulo}}</a></li>
                 {{/each}}
             </ul>
         </div>
@@ -71,7 +71,8 @@
                 </div>
                 <div class="modal-body">
                     <h3>{{subtitulo}}</h3>
-                    <p>{{cuerpo}}</p>
+                    <img src="{{imagen}}">
+                    <p>{{ cuerpo }}</p>
                 </div>
             </div>
         </div>
