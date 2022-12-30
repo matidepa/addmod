@@ -12,7 +12,7 @@
             <h2>Mas vendidas</h2>
             <ul class="lista-novedades">
                 {{#each novedades}}
-                <li><a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{ id  }}"><img src="{{imagen}}" width="120">{{titulo}}</a></li>
+                <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img src="{{imagen}}" width="120">{{titulo}}</a></li>
                 {{/each}}
             </ul>
         </div>
@@ -62,21 +62,22 @@
         </div>
     </div>
     {{#each novedades}}
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLabel">{{titulo}}</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h3>{{subtitulo}}</h3>
-                    <img src="{{imagen}}">
-                    <p>{{ cuerpo }}</p>
-                </div>
+<div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">{{ titulo }}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+                <h2>{{ subtitulo }}</h2>
+                <p>{{ cuerpo }}</p>
+                
+            </div>
+           
         </div>
     </div>
+</div>
     {{/each}}
     
     <div id="nosotros" class="row align-items-stetch my-3 staff py-4">
